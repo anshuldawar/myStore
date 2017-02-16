@@ -12,6 +12,11 @@ var app = angular.module('store',[]);
         description:'lorem ipsum',
         canPurchase: true,
         soldOut: false,
+         images:[
+        "axl.jpg",
+        "guitar0.jpg"    
+            
+    ]       
     },
     {                 //object
         name:'Guitar Capo',
@@ -19,8 +24,11 @@ var app = angular.module('store',[]);
         description:'lorem ipsum',
         canPurchase: true,
         soldOut: false,
-    },
-    {                 //object
+        images:[
+        "capo.jpg"    
+            
+    ]    
+    },  {                 //object
         name:'Guitar Strings',
         price: 32.5,
         description:'lorem ipsum',
@@ -28,7 +36,7 @@ var app = angular.module('store',[]);
         soldOut: false,
     },
     {                 //object
-        name:'Guitar pic',
+        name:'Gsuitar pic',
         price: 1.22,
         description:'lorem ipsum',
         canPurchase: true,

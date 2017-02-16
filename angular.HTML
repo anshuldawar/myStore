@@ -7,33 +7,38 @@
         <script type="text/javascript" src="angular.min.js"></script>
         <script type="text/javascript" src="app.js"></script>
         <!--<p>{{"hello "+"you"}}</p>-->
-        <div ng-hide="store.product.soldOut">
+        <div ng-repeat="product in store.products"   ng-hide="store.product.soldOut">
             <!--Product Container-->
-            <h1>{{store.products[0].name}}</h1>
-            <h2 class="pull-right"> {{store.products[0].price | currency}}</h2>
-            <p> {{store.products[0].description}}</p>
-            <button ng-show="store.products[0].canPurchase"> Add to Cart </button>
-        </div>  
-        <div ng-hide="store.product.soldOut">
-            <!--Product Container-->
-            <h1>{{store.products[1].name}}</h1>
-            <h2 class="pull-right"> {{store.products[1].price | currency}}</h2>
-            <p> {{store.products[1].description}}</p>
-            <button ng-show="store.products[1].canPurchase"> Add to Cart </button>
-        </div>  
-        <div ng-hide="store.product.soldOut">
-            <!--Product Container-->
-            <h1>{{store.products[2].name}}</h1>
-            <h2 class="pull-right"> {{store.products[2].price | currency}}</h2>
-            <p> {{store.products[2].description}}</p>
-            <button ng-show="store.products[2].canPurchase"> Add to Cart </button>
-        </div>  
-        <div ng-hide="store.product.soldOut">
-            <!--Product Container-->
-            <h1>{{store.products[3].name}}</h1>
-            <h2 class="pull-right"> {{store.products[3].price | currency}}</h2>
-            <p> {{store.products[3].description}}</p>
-            <button ng-show="store.products[3].canPurchase"> Add to Cart </button>
+            <h1>{{product.name}}</h1>
+            <h2 class="pull-right"> {{products.price | currency}}</h2>
+             <!--Image Container-->
+     <div class="gallery" ng-show="product.images.length">
+        <div class="img-wrap">
+          <img ng-src="Images/{{product.images[0]   }}" />
+        </div>
+        <ul class="img-rounded clearfix">
+          <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+            <img ng-src="Images/{{image}}" src="Images/image"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+            
+            
+            
+            
+<!--
+            <div>
+             <ul class="img-thumbnails clearfix">
+        <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">         
+            <img ng-src="Images/{{image}}"/>
+                 </li>
+                </ul>
+                 </div>
+-->
+                                          
+            <p> {{products.description}}</p>
+            <button ng-show="product.canPurchase"> Add to Cart </button>
         </div>  
     </body>
 </html>    
