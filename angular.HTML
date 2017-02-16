@@ -6,39 +6,49 @@
     <body ng-controller="StoreController as store">
         <script type="text/javascript" src="angular.min.js"></script>
         <script type="text/javascript" src="app.js"></script>
+        <script type="text/css" src="main.css"></script>
         <!--<p>{{"hello "+"you"}}</p>-->
         <div ng-repeat="product in store.products"   ng-hide="store.product.soldOut">
             <!--Product Container-->
             <h1>{{product.name}}</h1>
-            <h2 class="pull-right"> {{products.price | currency}}</h2>
+            <h2 class="pull-right"> {{product.price | currency}}</h2>
              <!--Image Container-->
-     <div class="gallery" ng-show="product.images.length">
-        <div class="img-wrap">
-          <img ng-src="Images/{{product.images[0]   }}" />
+ <!--    <div class="gallery" ng-show="product.images.length">
+       <div class="img-wrap">
+          <img ng-src="Images/axl.jpg" src="Images/axl.jpg">
         </div>
         <ul class="img-rounded clearfix">
-          <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
-            <img ng-src="Images/{{image}}" src="Images/image"/>
-          </li>
+          <li class="pull-left" ng-repeat="image in product.images">
+            <img class="thumbnail"ng-src="Images/{{image}}" src="Images/image"/>
+          </li> 
         </ul>
       </div>
-    </div>
-            
-            
-            
-            
-<!--
+      
+-->            
             <div>
              <ul class="img-thumbnails clearfix">
         <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">         
             <img ng-src="Images/{{image}}"/>
                  </li>
                 </ul>
-                 </div>
--->
-                                          
-            <p> {{products.description}}</p>
-            <button ng-show="product.canPurchase"> Add to Cart </button>
+                 </div>               
+            <button class="btn-primary" ng-show="product.canPurchase"> Add to Cart </button>
+            <li><a href ng-click="tab = 1">Description</a></li>
+            <li><a href ng-click="tab = 2">Specificial</a></li>
+            <li><a href ng-click="tab = 3">Description</a></li>
+            {{tab}}
+            <div class="panel" ng-show="tab === 1">
+            <h4>Description</h4>
+            <p> {{product.description}}</p>    
+            </div>
+            <div class="panel" ng-show="tab === 2">
+            <h4>Specification</h4>
+            <blockquote>None yet</blockquote>    
+            </div>
+            <div class="panel" ng-show="tab === 3">
+            <h4>Review</h4>
+            <blockquote>None yet</blockquote>   
+            </div>
         </div>  
     </body>
 </html>    
