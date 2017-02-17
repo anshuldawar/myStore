@@ -35,7 +35,7 @@
             <button class="btn-primary" ng-show="product.canPurchase"> Add to Cart </button>
             <li><a href ng-click="tab = 1">Description</a></li>
             <li><a href ng-click="tab = 2">Specificial</a></li>
-            <li><a href ng-click="tab = 3">Description</a></li>
+            <li><a href ng-click="tab = 3">Review</a></li>
             {{tab}}
             <div class="panel" ng-show="tab === 1">
             <h4>Description</h4>
@@ -47,7 +47,11 @@
             </div>
             <div class="panel" ng-show="tab === 3">
             <h4>Review</h4>
-            <blockquote>None yet</blockquote>   
+            <blockquote ng-repeat="review in product.reviews">
+                <b>Stars:{{review.stars}}</b>
+                {{review.body}}
+                <cite>by: {{review.author}}</cite>
+                </blockquote>   
             </div>
         </div>  
     </body>

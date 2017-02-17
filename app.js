@@ -15,7 +15,19 @@ var app = angular.module('store',[]);
          images:[
         "hp1.jpg" 
             
-    ]       
+    ],
+    reviews :[
+        {
+            stars: 5,
+            body:"I Love this book",
+            author:'joe@thomas.com'
+        },
+         {
+            stars: 4,
+            body:"Recommend this one ",
+            author:'larry@mark.com'
+        }
+    ],
     },
     {                 //object
         name:'Harry Potter and the Chamber of Secrets',
@@ -26,7 +38,19 @@ var app = angular.module('store',[]);
         images:[
         "hp2.jpg"    
             
-    ]    
+    ],
+    reviews :[
+        {
+            stars: 5,
+            body:"I Love this book",
+            author:'joe@thomas.com'
+        },
+         {
+            stars: 4,
+            body:"Recommend this one ",
+            author:'larry@mark.com'
+        }
+    ],    
     },  {                 //object
         name:'Harry Potter and the Prisoner of Azkaban',
         price: 16.46,
@@ -36,7 +60,19 @@ var app = angular.module('store',[]);
            images:[
         "hp3.jpg" 
             
-    ]   
+    ],
+    reviews :[
+        {
+            stars: 5,
+            body:"I Love this book",
+            author:'joe@thomas.com'
+        },
+         {
+            stars: 4,
+            body:"Recommend this one ",
+            author:'larry@mark.com'
+        }
+    ],   
     },
     {                 //object
         name:'Harry Potter and the Goblet of Fire',
@@ -47,6 +83,18 @@ var app = angular.module('store',[]);
         images:[
         "hp4.jpg" 
             
+    ],
+    reviews :[
+        {
+            stars: 5,
+            body:"I Love this book",
+            author:'joe@thomas.com'
+        },
+         {
+            stars: 4,
+            body:"Recommend this one ",
+            author:'larry@mark.com'
+        }
     ]   
     }    
     ]
