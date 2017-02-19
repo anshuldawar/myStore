@@ -5,6 +5,14 @@ var app = angular.module('store',[]);
         this.products= gems;
     });
     
+    app.controller("ReviewController",function(){
+        this.review = {}; 
+        this.addReview = function(product){
+          product.reviews.push(this.review);  
+        this.review = {};     
+        };
+        
+    });
     var gems = [
         {                 //object
         name:'Harry Potter and the Philosopher\'s Stone ',
