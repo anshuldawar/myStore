@@ -46,8 +46,19 @@
             <blockquote>None yet</blockquote>    
             </div>
             <div class="panel" ng-show="tab === 3">
+                <ul>
             <h4>Review</h4>
-            
+                <li ng-repeat="review in product.reviews">
+                    <blockquote>
+                       <strong>{{review.stars}} Stars</strong>
+                  {{review.body}}
+                  <cite class="clearfix">{{review.author}}</cite> 
+                    </blockquote>
+                    
+                    
+                    </li>    
+                </ul>
+                <!--
                 <form name="reviewForm" ng-Controller="ReviewController as reviewCtrl"
                                         ng-submit="reviewCtrl.addReview(product)">
                 <blockquote ng-repeat="review in product.reviews">
@@ -63,7 +74,7 @@
                 <option value="4">4 star</option>
                 <option value="5">5 star</option>    
                 </select>
-                   
+              -->     
                 <textarea ng-model="reviewCtrl.review.body"></textarea>
                 <label>by:</label>
                 <input ng-model="reviewCtrl.review.author" type="email"/>
