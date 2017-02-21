@@ -8,21 +8,24 @@
         <script type="text/javascript" src="app.js"></script>
         <script type="text/css" src="main.css"></script>
         <!--<p>{{"hello "+"you"}}</p>-->
-        <div ng-repeat="product in store.products"   ng-hide="store.product.soldOut">
+       
+           
+            
             <!--Product Container-->
+            <div ng-repeat="product in store.products"   ng-hide="store.product.soldOut">
             <h1>{{product.name}}</h1>
             <h2 class="pull-right"> {{product.price | currency}}</h2>
-             <!--Image Container-->
- <!--    <div class="gallery" ng-show="product.images.length">
-       <div class="img-wrap">
-          <img ng-src="Images/axl.jpg" src="Images/axl.jpg">
-        </div>
-        <ul class="img-rounded clearfix">
-          <li class="pull-left" ng-repeat="image in product.images">
+            <!--Image Container-->
+            <!--    <div class="gallery" ng-show="product.images.length">
+            <div class="img-wrap">
+            <img ng-src="Images/axl.jpg" src="Images/axl.jpg">
+            </div>
+            <ul class="img-rounded clearfix">
+            <li class="pull-left" ng-repeat="image in product.images">
             <img class="thumbnail"ng-src="Images/{{image}}" src="Images/image"/>
-          </li> 
-        </ul>
-      </div>
+            </li> 
+            </ul>
+            </div>
       
 -->            
             <div>
@@ -59,9 +62,9 @@
         <form name="reviewForm">
               <!--  Live Preview -->
               <blockquote>
-                <strong> Stars</strong>
-                
-                <cite class="clearfix">—</cite>
+                <strong>{{review.stars}} Stars</strong>
+                {{review.body}}
+                <cite class="clearfix">—{{review.author}}</cite>
               </blockquote>
                  <!--  Review Form -->
               <h4>Submit a Review</h4>
