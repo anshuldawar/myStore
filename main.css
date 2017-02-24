@@ -1,10 +1,6 @@
-.thumbnail{
-    height: 10px;
-    width: 10px;
+.ng-dirty.ng-invalid{
+  border-color:red;
 }
-ul {
-    list-style-type: none;
-}
-body{
-    background-color:black;
+.ng-valid.ng-dirty{
+  border-color:green;
 }

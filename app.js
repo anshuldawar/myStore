@@ -1,18 +1,20 @@
-(function(){
-var app = angular.module('store',[]);
 
-    app.controller('StoreController', function(){
-        this.products= gems;
-    });
-    
+    (function(){
+         var app = angular.module('store',[]);
+         app.controller('StoreController', function()
+         {
+         this.products= gems;
+          });
+       
     app.controller('ReviewController', function(){
-        this.review={};
-        this.addReview = function(product){
+    this.review={}; 
+    this.addReview = function(product){
+      this.review.createdOn=Date.now();
+      
       product.reviews.push(this.review);
-      this.review={};
-     
+      this.review = {};
     };
-  });
+
     var gems = [
         {                 //object
         name:'Harry Potter and the Philosopher\'s Stone ',
@@ -104,7 +106,7 @@ var app = angular.module('store',[]);
             author:'larry@mark.com'
         }
     ]   
-    }    
-    ]
-    
-})();    
+    }]
+
+});
+    });
