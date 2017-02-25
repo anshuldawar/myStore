@@ -13,7 +13,8 @@
         </style>
     </head>
     <body ng-controller="StoreController as store">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <!--<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>-->
         <script type="text/javascript" src="app.js"></script>
         <script type="text/css" src="main.css"></script>
         <!--<p>{{"hello "+"you"}}</p>-->
@@ -64,7 +65,8 @@
                     <blockquote>
                 <strong>{{review.stars}} Stars</strong>
                 {{review.body}}
-                  <cite class="clearfix">—{{review.author}} on {{review.createdOn | date}} </cite> 
+                <cite class="clearfix">-{{review.author}}</cite>         
+                 <!-- <cite class="clearfix">—{{review.author}} on {{review.createdOn | date}} </cite>--> 
                     </blockquote>
                 </li>    
                 </ul>
