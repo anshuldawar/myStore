@@ -14,6 +14,15 @@ var app = angular.module('store',[]);
      
     };
   });
+    
+      app.directive('productDescription', function(){
+        return {
+        restrict: 'E',
+        templateUrl: 'product-description.html'
+        };
+        });
+    
+    
     var gems = [
         {                 //object
         name:'Harry Potter and the Philosopher\'s Stone ',

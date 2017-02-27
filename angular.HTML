@@ -50,10 +50,9 @@
             <li><a href ng-click="tab = 2">Specificial</a></li>
             <li><a href ng-click="tab = 3">Review</a></li>
             {{tab}}
-            <div class="panel" ng-show="tab === 1">
-            <h4>Description</h4>
-            <p> {{product.description}}</p>    
-            </div>
+            <product-description class="panel" ng-show="tab === 1" ng-include="'product-description.html'">
+            
+            </product-description>
             <div class="panel" ng-show="tab === 2">
             <h4>Specification</h4>
             <blockquote>None yet</blockquote>    
@@ -70,6 +69,8 @@
                     </blockquote>
                 </li>    
                 </ul>
+                
+                
                  <!--  Review Form -->
             <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
   
