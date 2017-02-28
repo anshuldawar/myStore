@@ -21,6 +21,12 @@ var app = angular.module('store',[]);
         templateUrl: 'product-description.html'
         };
         });
+      app.directive("productSpecs", function() {
+    return {
+      restrict: 'A',
+      templateUrl: "product-specs.html"
+    };
+  });
     
     
     var gems = [
