@@ -27,6 +27,12 @@ var app = angular.module('store',[]);
       templateUrl: "product-specs.html"
     };
   });
+        app.directive("productReviews", function() {
+    return {
+      restrict: 'E',
+      templateUrl: "product-review.html"
+    };
+  });
     
     
     var gems = [
