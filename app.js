@@ -34,6 +34,12 @@ var app = angular.module('store',[]);
     };
   });
     
+    app.directive('productTabs', function() {
+    return {
+    restrict: 'E'
+  };
+});
+    
     
     var gems = [
         {                 //object
