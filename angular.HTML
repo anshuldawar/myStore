@@ -9,13 +9,20 @@
             .ng-valid.ng-dirty{
               border-color:green;
             }
-
+            
+            body{
+            margin-right: 2 5%;
+            margin-bottom: 5%;
+            margin-top: 2%;
+            margin-left: 15%;    
+                }
         </style>
     </head>
     <body ng-controller="StoreController as store">
         <script type="text/javascript" src="angular.min.js"></script>
         <!--<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>-->
         <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="products.js"></script>
         <script type="text/css" src="main.css"></script>
         <!--<p>{{"hello "+"you"}}</p>-->
        
@@ -23,7 +30,7 @@
             
             <!--Product Container-->
             <div ng-repeat="product in store.products"   ng-hide="store.product.soldOut">
-            <h1>{{product.name}}</h1>
+            <h1 class="text-center">{{product.name}}</h1>
             <h2 class="pull-right"> {{product.price | currency}}</h2>
             <!--Image Container-->
             <!--    <div class="gallery" ng-show="product.images.length">

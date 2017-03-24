@@ -1,5 +1,5 @@
 (function(){
-var app = angular.module('store',[]);
+var app = angular.module('store',['store-directives']);
 
     app.controller('StoreController', function(){
         this.products= gems;
@@ -15,46 +15,7 @@ var app = angular.module('store',[]);
     };
   });
     
-      app.directive('productDescription', function(){
-        return {
-        restrict: 'E',
-        templateUrl: 'product-description.html'
-        };
-        });
-      app.directive("productSpecs", function() {
-    return {
-      restrict: 'A',
-      templateUrl: "product-specs.html"
-    };
-  });
-        app.directive("productReviews", function() {
-    return {
-      restrict: 'E',
-      templateUrl: "product-review.html"
-    };
-  });
-    
-     app.directive('productTabs', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'product-tabs.html',
-    controller: function() {
-      this.tab = 1;
-
-      this.isSet = function(checkTab) {
-        return this.tab === checkTab;
-      };
-
-      this.setTab = function(activeTab) {
-        this.tab = activeTab;
-      };
-    },
-    controllerAs: 'tab'
-  };
-});
-
-    
-    
+        
     var gems = [
         {                 //object
         name:'Harry Potter and the Philosopher\'s Stone ',
