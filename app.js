@@ -1,6 +1,15 @@
 (function(){
 var app = angular.module('store',['store-directives']);
-
+    /*    
+    added JSON api
+    app.controller('StoreController',['$http', function(){  
+        var store = this;
+    store.products = [];
+    
+    $http.get('/store-products.json').success(function(data){
+      store.products = data;
+    });
+    }]);*/
     app.controller('StoreController', function(){
         this.products= gems;
     });
