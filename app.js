@@ -10,7 +10,7 @@ var app = angular.module('store',['store-directives']);
       store.products = data;
     });
     }]);*/
-    app.controller('StoreController', function(){
+    app.controller('StoreController', function(){//controller is where we define our behavior functions
         this.products= gems;
     });
     

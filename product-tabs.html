@@ -1,8 +1,8 @@
-            <button class="btn-primary" ng-show="product.canPurchase"> Add to Cart </button>
+            <button class="btn-primary" ng-show="product.canPurchase" ng-init="tab = 1"> Add to Cart </button>
             <li><a href ng-click="tab = 1">Description</a></li>
             <li><a href ng-click="tab = 2">Specificial</a></li>
             <li><a href ng-click="tab = 3">Review</a></li>
-            <!--{{tab}}-->
+            <!--{{tab}}-->  
      <!--Product Description-->
             <product-description class="panel" ng-show="tab === 1" ng-include="'product-description.html'">
            
