@@ -1,44 +1,26 @@
     <!DOCTYPE HTML>
 <html ng-app="store">
     <head>
+     <title>AngularJS</title>    
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
-        <style>
-            .ng-dirty.ng-invalid{
-            border-color:red;
-            }
-            .ng-valid.ng-dirty{
-              border-color:green;
-            }
-            
-            body{
-            line-height:1.5;
-            background-color: #f2f2f2;
-            border-radius: 10px;   
-            border: 10%;   
-            width: 760px;
-            margin: 20px auto 20px auto ; 
-            padding: 15px;
-            }
-            html{
-              background-color: white;
-            }
-           
-        </style>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">   
     </head>
     <body ng-controller="StoreController as store">
         <script type="text/javascript" src="angular.min.js"></script>
         <!--<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>-->
         <script type="text/javascript" src="app.js"></script>
         <script type="text/javascript" src="products.js"></script>
-        <script type="text/css" src="main.css"></script>
+        
         <!--<p>{{"hello "+"you"}}</p>-->
-       
+        <h1 Class="text-center" ><u>An Angular Store</u></h1>
            
             
             <!--Product Container-->
             <div ng-repeat="product in store.products"   ng-hide="store.product.soldOut">
             <h1 class="text-center">{{product.name}}</h1>
             <h2 class="pull-right"> {{product.price | currency}}</h2>
+                
             <!--Image Container-->
             <!--    <div class="gallery" ng-show="product.images.length">
             <div class="img-wrap">
