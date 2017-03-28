@@ -40,12 +40,12 @@ var app = angular.module('store',['store-directives']);
         {
             stars: 5,
             body:"I Love this book",
-            author:'joe@thomas.com'
+            author:'ansarimofid@gmail.com'
         },
          {
             stars: 4,
             body:"Recommend this one ",
-            author:'larry@mark.com'
+            author:'anshuldawar1995@gmail.com'
         }
     ],
     },
@@ -63,12 +63,12 @@ var app = angular.module('store',['store-directives']);
         {
             stars: 5,
             body:"I Love this book",
-            author:'joe@thomas.com'
+            author:'ansarimofid@gmail.com'
         },
          {
             stars: 4,
             body:"Recommend this one ",
-            author:'larry@mark.com'
+            author:'anshuldawar1995@gmail.com'
         }
     ],    
     },  {                 //object
@@ -85,12 +85,12 @@ var app = angular.module('store',['store-directives']);
         {
             stars: 5,
             body:"I Love this book",
-            author:'joe@thomas.com'
+            author:'ansarimofid@gmail.com'
         },
          {
             stars: 4,
             body:"Recommend this one ",
-            author:'larry@mark.com'
+            author:'anshuldawar1995@gmail.com'
         }
     ],   
     },
@@ -108,12 +108,12 @@ var app = angular.module('store',['store-directives']);
         {
             stars: 5,
             body:"I Love this book",
-            author:'joe@thomas.com'
+            author:'ansarimofid@gmail.com'
         },
          {
             stars: 4,
             body:"Recommend this one ",
-            author:'larry@mark.com'
+            author:'anshuldawar1995@gmail.com'
         }
     ]   
     }    
